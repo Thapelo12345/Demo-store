@@ -15,7 +15,7 @@ function inforScreen(){
     
     let screenPic = $('<img>')
     screenPic.attr('id', 'screen-pic')
-    screenPic.attr('src', './store/Pics/question mark.jpeg')
+    screenPic.attr('src', `${process.env.PUBLIC_URL}/Pics/question mark.jpeg`)
     screenPic.attr('alt', 'item image')
     screenPic.appendTo(itemInfor)
 
@@ -75,7 +75,6 @@ export function createItems(arr){
             
             let priceTag = $('<h1></h1>')
             priceTag.addClass('price-tag')
-            // priceTag.html('R ' + item.price.toString())
             priceTag.text('R ' + item.price.toString())
 
             let cartButton = $('<button></button>')
@@ -284,7 +283,6 @@ function hoverElements(){
             function(){
             let obj = itemList.find((item)=> item.id ===  Number($(this).attr('id')))
 
-            // console.log(obj.picUrl)
             $('#screen-pic').attr('src', obj.picUrl)
             $('#price-display').text('R' + obj.price)
             obj.colors.forEach((color)=>{
@@ -333,14 +331,13 @@ function hoverElements(){
                 sizeTag.appendTo('#size-display')
             }
     
-// if(obj.picUrl.split('/'))
             },//mouse enter
     
             function(){
                 $('#price-display').text('R')
                 $('#color-display').empty()
                 $('#size-display').empty()
-                $('#screen-pic').attr('src', './store/Pics/question mark.jpeg')
+                $('#screen-pic').attr('src', `${process.env.PUBLIC_URL}/Pics/question mark.jpeg`)
             }//mouse out
         )
     })
