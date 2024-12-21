@@ -1,0 +1,14 @@
+body{
+    height: 100vh;
+    background-color: white;
+    padding-top: 1%;
+    overflow: hidden;
+}
+
+#root{
+    border: 2px solid blue;
+    width: 100vh;
+    height: 100vh;
+    overflow: hidden;
+}
+
