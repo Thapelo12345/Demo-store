@@ -58,7 +58,7 @@ function OrderForm(){
             <label htmlFor = 'check' className = 'radio-labels'>Check</label>
         </div>
         </section>
-
+<div id ="form-btns-container">
         <button id = 'form-cancel' className = 'form-buttons'  onClick={()=>{
         closeForms('order')
         cancel()
@@ -66,7 +66,7 @@ function OrderForm(){
 
     <button id = 'form-submit' type = 'submit' className = 'form-buttons' value = 'submit'
     onClick={orderFormSubmit}>Submit</button>
-
+</div>
     </form>
     
   )

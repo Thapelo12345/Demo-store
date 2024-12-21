@@ -1,19 +1,20 @@
-:root{--header-colo: crimson;}
+:root{--header-colo: whitesmoke;}
 
 #order-form-container{
     position: fixed;
-    border: .1px solid red;
     top: 5%;
-    left: 20%;
-    min-width: 55vw;
-    max-height: 90vh;
+    left: 2%;
+    display: flex;
+    flex-direction: column;
+    width: 90vw;
+    max-width: 600px;
+    min-height: 51vh;
     margin: auto;
     transition-duration: .5s;
-    background: none;
-    backdrop-filter: blur(20px);
+    background-color: cadetblue;
     border-radius: 10px;
     visibility: hidden; 
-    box-shadow: 1px 9px 20px black;
+    box-shadow: 1px 9px 20px black, inset 0 0 10px white;
     z-index: 3;
 }
 
@@ -21,7 +22,7 @@ h1, h3{font-family: Georgia, seri;}
 
 input[type=text], input[type=email], input[type=tel] {
     border: .1px solid cyan;
-    min-width: 35%;
+    width: 40%;
     box-shadow: 1px 1px 10px gray;
     margin: 1%;
     border-radius: 2px;
@@ -35,6 +36,7 @@ input[type=text], input[type=email], input[type=tel]:focus {
 label{
     font-size: clamp(.6rem, 2vw, 1.1rem);
     margin-left: 4%;
+    color: white;
 }
 
 #payment-and-delivery{
@@ -45,25 +47,26 @@ label{
 #order-title{
     text-align: center;
     margin-top: 0;
-    font-size: clamp(.8rem, 2vw, 1.7rem);
+    font-size: clamp(1rem, 2vw, 1.4rem);
     color: var(--header-colo);
 }
 
 .pay-and-deliver{
-    border: 1px solid green;
     display: flex;
     flex-direction: column;
     background-image: linear-gradient(0deg, lightblue, steelblue);
     box-shadow: 1px .1px 10px black;
-    min-width: 45%;
+    width: 35%;
     margin: 1%;
-    padding: 1%;
+    padding: 0;
     border-radius: 5px;
 }
 
 .pay-and-deliver label{
     position: relative;
     bottom: 7%;
+    font-size: clamp(.4rem, 2vw, .8rem);
+
 }
 
 .subtitles{
@@ -78,25 +81,25 @@ label{
     margin-top: 0;
     margin-bottom: 5%;
     border-radius: 2%;
-    min-width: 15%;
-    min-height: 6vh;
+    width: 16%;
+    height: 55%;
     color: aliceblue;
     border: none;
     cursor: pointer;
     border-radius: 5px;
     box-shadow: 1px 1px 10px black  ;
-    font-size: clamp(.6rem, 2vw, 1rem)
+    font-size: clamp(.7rem, 2vw, 1rem)
 }
 
 .form-buttons:hover{transform: scale(1.1);}
 
 #form-cancel{
     border: .1px solid crimson;
-    background-image: linear-gradient(0deg, cyan, rgb(233, 49, 49));
-    box-shadow: 2px 15px 55px red;
+    background-image: linear-gradient(0deg, cyan, crimson);
+    box-shadow: 2px 15px 55px crimson;
 }
 #form-submit{
-    border: .1px solid lime;
-    background-image: linear-gradient(0deg, cyan, lime);
-    box-shadow: 2px 15px 55px lime;
+    border: .1px solid green;
+    background-image: linear-gradient(0deg, cyan, green);
+    box-shadow: 2px 1px 5px green;
 }
